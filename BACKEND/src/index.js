@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import bcrypt from 'bcryptjs';
 import { initDb, models, seedDefaults, computeViewerLevel, computeStreamerLevel, computeLevelState, advanceLevel } from './setup.js';
-
+ 
 const PASSWORD_MODE = (process.env.PASSWORD_ENCODING || process.env.INSECURE_PASSWORD_ENCODING || '').toLowerCase();
 const useBase64 = PASSWORD_MODE === 'base64';
 const isBcrypt = (hash) => typeof hash === 'string' && /^\$2[aby]\$\d{2}\$/.test(hash);
